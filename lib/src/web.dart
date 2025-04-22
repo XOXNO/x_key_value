@@ -1,15 +1,12 @@
 // ignore: avoid_web_libraries_in_flutter
 import 'dart:html' show window;
 
-import 'package:x_key_value/src/factory.dart';
 import 'package:x_key_value/src/interface.dart';
-import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:x_key_value/src/type.dart';
 
 class XKeyValue extends XKeyValueInterface {
-  XKeyValue(FlutterSecureStorage flutterSecureStorage,
-      SharedPreferencesFactory sharedPreferencesFactory)
-      : super(flutterSecureStorage, sharedPreferencesFactory);
+  XKeyValue(super.flutterSecureStorage,
+      super.sharedPreferencesFactory);
 
   @override
   Future<void> write({
